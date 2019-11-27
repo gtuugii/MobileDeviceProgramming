@@ -17,13 +17,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        /*
-            foodlist.add("Kotlin")
-            foodlist.add("Scala")
-            foodlist.add("Ruby")
-            println(foodlist)
-        */
     }
 
     fun imgClick(view: View) {
@@ -31,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun onAddFood(view: View) {
-        //2 ways - it is old ways
+        //2 ways - old ways
         //tv = findViewById(R.id.textView1) as TextView
         //tv = findViewById<TextView>(R.id.textView1)
 
