@@ -10,16 +10,25 @@
     tools:context=".MainActivity"
     >
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
     <ImageButton
         android:layout_gravity="center_horizontal"
         android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:onClick="imgClick"
         android:id="@+id/imageBtn1"
         android:src="@drawable/dd_logo"
-
     />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
     <TextView
+        android:id="@+id/txtFoodName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hamburger"
@@ -27,14 +36,25 @@
         android:textSize="30dp"
         />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        />
+
     <EditText
+        android:id="@+id/editFood"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="add new food"
         />
-
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
     <Button
+        android:id="@+id/addFoodBtn"
+        android:onClick="onAddFood"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -42,5 +62,19 @@
         android:textColor="@color/colorWhite"
         android:background="@color/colorGrey"
         />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
 
+        />
+    <Button
+        android:id="@+id/decideBtn"
+        android:onClick="onDecide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="DECIDE!"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorGrey"
+        />
 </LinearLayout>
