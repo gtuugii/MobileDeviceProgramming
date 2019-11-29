@@ -1,5 +1,8 @@
 package mn.tuugii.walmartstore
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,10 +26,16 @@ class RegisterActivity : AppCompatActivity() {
         var email: String = editEmail.text.toString()
         var pass : String = editPassword.text.toString()
 
-        var main: MainActivity = MainActivity()
+        var user = User(fname, lname, email, pass)
 
-        main.userList.add(User(fname, lname, email, pass))
+        val data = Intent()
+        //val text = input?.text.toString()
+        //---set the data to pass back
+        data.putExtra("user", user)
 
-        Toast.makeText(this, "Account created successfully", Toast.LENGTH_LONG).show()
+        //data.data = Uri.parse(text)
+        setResult(Activity.RESULT_OK, data)
+        //---close the activity---
+        finish()
     }
 }

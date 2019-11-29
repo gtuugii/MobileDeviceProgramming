@@ -47,6 +47,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:lines="1"
         />
 
     <Space
@@ -63,6 +64,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:lines="1"
         />
 
     <Space
@@ -79,6 +81,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:lines="1"
         />
 
     <Space
@@ -95,7 +98,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:password="true"
+        android:lines="1"
         />
 
     <Space
