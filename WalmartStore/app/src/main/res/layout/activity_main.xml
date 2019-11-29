@@ -68,12 +68,15 @@
         android:layout_height="50dp"/>
 
     <Button
+        android:id="@+id/btnSignIn"
+        android:onClick="onSignIn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Sign In"
         android:textColor="@color/colorWhite"
         android:background="@color/colorBlue"
         android:layout_gravity="center"
+        android:textAllCaps="false"
         />
 
     <Space
@@ -95,5 +98,6 @@
         android:text="Create a new account"
         android:textColor="@color/colorBlue"
         android:layout_gravity="center"
+        android:textAllCaps="false"
         />
 </LinearLayout>
