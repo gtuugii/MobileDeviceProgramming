@@ -15,13 +15,13 @@ class ShoppingCategory : AppCompatActivity() {
 
         val intt = intent
         username = intt.getStringExtra("msg")
-        txtWelcome.text = username
+        txtWelcome.text = "Welcome " + username
         //txtWelcome.gr
 
         Toast.makeText(this, "Welcome " + username, Toast.LENGTH_LONG).show()
     }
 
     fun onClickCategory(view: View) {
-        Toast.makeText(this, "Hi $username This is a Toast.", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Hi $username. This is a Toast.", Toast.LENGTH_LONG).show()
     }
 }

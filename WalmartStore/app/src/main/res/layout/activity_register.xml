@@ -73,7 +73,7 @@
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Email addredd *"
+        android:text="Email address *"
         android:layout_gravity="center"
         />
     <EditText

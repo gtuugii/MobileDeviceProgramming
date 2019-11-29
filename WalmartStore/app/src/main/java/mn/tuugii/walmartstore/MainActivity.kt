@@ -3,8 +3,10 @@ package mn.tuugii.walmartstore
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 
@@ -15,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
     var userList = ArrayList<User>()
     var t: TextView? = null
+
+    val PICK_NEW_USER_REQUEST = 1
+    val PICK_RECOVERY_EMAIL_REQUEST = 2
+    val MY_TAG = "Walmart"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,15 +102,64 @@ class MainActivity : AppCompatActivity() {
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, intent);
-        if (requestCode == 1) {
-            if (resultCode == Activity.RESULT_OK) {
-                val returnedResult = data!!.getSerializableExtra("user")
-                var user = returnedResult as User
-                userList.add(user)
-                Toast.makeText(this, "Account created successfully", Toast.LENGTH_LONG).show()
+
+        try {
+            if (requestCode == PICK_NEW_USER_REQUEST) {
+                if (resultCode == Activity.RESULT_OK) {
+                    val returnedResult = data!!.getSerializableExtra("user")
+                    var user = returnedResult as User
+                    userList.add(user)
+                    Toast.makeText(this, "Account created successfully", Toast.LENGTH_LONG).show()
+                }
+                else
+                    Toast.makeText(this, "Account is not created", Toast.LENGTH_LONG).show()
             }
-            else
-                Toast.makeText(this, "Account is not created", Toast.LENGTH_LONG).show()
+
+            if (requestCode == PICK_RECOVERY_EMAIL_REQUEST) {
+                if (resultCode == Activity.RESULT_OK) {
+                    val email = data!!.getStringExtra("email").toString()
+                    var pass: String? = ""
+
+                    //Log.i(MY_TAG, email);
+
+                    for(user in userList){
+                        if(user.email.equals(email)){
+                            pass = user.password
+                            break
+                        }
+                    }
+
+                    Toast.makeText(this, "your email: $email and password: $pass", Toast.LENGTH_LONG).show()
+
+                    if(!pass.equals("")) {
+                        val intt = Intent(Intent.ACTION_SENDTO)
+                        intt.data = Uri.parse("mailto:$email")
+                        intt.putExtra(Intent.EXTRA_SUBJECT, "Recovery your password")
+                        intt.putExtra(Intent.EXTRA_TEXT, "Your password is $pass")
+                        if (intt.resolveActivity(packageManager) != null) {
+                            startActivity(intt)
+                            Toast.makeText(this, "Sent the password to your email", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    else
+                        Toast.makeText(this, "Not found your email", Toast.LENGTH_LONG).show()
+                }
+                else
+                    Toast.makeText(this, "Don't sent an email", Toast.LENGTH_LONG).show()
+            }
+        }
+        catch (ex: Exception) {
+            Log.i(MY_TAG,ex.toString());
+            Toast.makeText(this, ex.toString(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    fun onClickForgetPassword(view: View) {
+        val intt = Intent(this, ForgetPassword::class.java)
+        //intt.putExtra("users", userList)
+        startActivityForResult(intt, 2)
+        //Toast.makeText(this, "Isdddd", Toast.LENGTH_LONG).show()
+    }
+
+
 }
