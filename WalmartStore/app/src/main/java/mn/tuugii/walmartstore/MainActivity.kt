@@ -80,4 +80,10 @@ class MainActivity : AppCompatActivity() {
 
         return true
     }
+
+    fun onClickNewAccount(view: View) {
+        val intt = Intent(this, RegisterActivity::class.java)
+        intt.putExtra("msg", "Enter the required fields")
+        startActivity(intt)
+    }
 }
