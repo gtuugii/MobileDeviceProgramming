@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Walmart Store</string>
+
+    <string-array name="electronics_products">
+        <item>TV</item>
+        <item>Phone</item>
+        <item>USA</item>
+        <item>Radio</item>
+        <item>Computer</item>
+        <item>HTV</item>
+    </string-array>
+
 </resources>
