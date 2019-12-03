@@ -35,27 +35,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:weightSum="1"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/a11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.33"
             android:text="Linux Kernel" />
 
         <RadioButton
             android:id="@+id/a12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.33"
             android:text="Libraries" />
 
         <RadioButton
             android:id="@+id/a13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.33"
             android:text="Applications" />
     </RadioGroup>
 
@@ -71,66 +72,66 @@
         android:textColor="@color/colorPrimaryDark"
         />
 
-    <CheckBox
-        android:id="@+id/yes"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="Yes" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/no"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No"
-        android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:layout_weight="0.33"
+            android:textSize="14sp" />
 
-    <CheckBox
-        android:id="@+id/none"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="None"
-        android:textSize="14sp" />
+        <CheckBox
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:layout_weight="0.33"
+            android:textSize="14sp" />
 
-    <TableLayout
-        android:id="@+id/tblDynamic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        android:orientation="vertical"
-        >
+        <CheckBox
+            android:id="@+id/none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None"
+            android:layout_weight="0.33"
+            android:textSize="14sp" />
 
-        <TableRow
-            android:padding="10dp"
-            >
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/btnReset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"
-                android:text="Reset"
-                android:onClick="onClickBtnReset"
-                />
-            <Space
-                android:layout_width="1dp"
-                android:layout_height="wrap_content"
-                />
-            <Button
-                android:id="@+id/btnSubmit"
-                android:onClick="onClickBtnSubmit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"
-                android:text="Submit"
-                />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-        </TableRow>
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="0.45"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickBtnReset"
+            android:text="Reset"
+            android:textColor="@color/colorWhite" />
 
-    </TableLayout>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="0.45"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickBtnSubmit"
+            android:text="Submit"
+            android:textColor="@color/colorWhite" />
 
-
+    </LinearLayout>
 
 </LinearLayout>
