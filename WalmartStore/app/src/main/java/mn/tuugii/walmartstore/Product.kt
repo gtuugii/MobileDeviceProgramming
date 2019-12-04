@@ -6,7 +6,7 @@ data class Product(var itemid: Int?, var catid: Category?, var title: String?,
                    var desc: String?):
     Serializable {
         override fun toString(): String {
-            return "Product(itemid=$itemid, title=$title, price=$price)"
+            return "Product:( title=$title, price=$price )"
         }
 
     fun getProductList(){

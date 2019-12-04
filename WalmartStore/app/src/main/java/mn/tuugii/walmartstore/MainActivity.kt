@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initApp(){
+        userList.add(User("Battuguldur", "Ganbold", "1", "1"))
         userList.add(User("Battuguldur", "Ganbold", "tuugii83@gmail.com", "123"))
         userList.add(User("Tuugii", "Ganbold", "tuugii@gmail.com", "123"))
         userList.add(User("Puujee", "P", "puujee@gmail.com", "123"))

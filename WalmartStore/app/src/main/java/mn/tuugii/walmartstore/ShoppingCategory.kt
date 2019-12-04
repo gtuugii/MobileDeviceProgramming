@@ -3,15 +3,11 @@ package mn.tuugii.walmartstore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_shopping_category.*
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_recycler_list_view.*
-import mn.tuugii.walmartstore.CardView.CardViewMainActivity
+import mn.tuugii.walmartstore.cardview.CardViewMainActivity
+import mn.tuugii.walmartstore.personview.PersonActivity
 
 class ShoppingCategory : AppCompatActivity() {
     var username : String? = ""
@@ -78,7 +74,7 @@ class ShoppingCategory : AppCompatActivity() {
             }
             imgMedicine -> {
                 Toast.makeText(this, "This is a medicine category.", Toast.LENGTH_LONG).show()
-                var intt = Intent(this, ListProductsActivity::class.java)
+                var intt = Intent(this, PersonActivity::class.java)
                 intt.putExtra("productList", productList)
                 startActivity(intt)
             }

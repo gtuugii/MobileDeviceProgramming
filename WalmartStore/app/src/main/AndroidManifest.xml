@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CardView.CardViewMainActivity"></activity>
+        <activity android:name=".personview.PersonActivity"></activity>
+        <activity android:name=".cardview.CardViewMainActivity" />
         <activity android:name=".RecyclerListViewActivity" />
         <activity android:name=".ListProductsActivity" />
         <activity android:name=".ForgetPassword" />
@@ -22,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardView.DetailActivity"> </activity>
+        <activity android:name=".cardview.DetailActivity"></activity>
     </application>
 
 </manifest>
