@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_shopping_category.*
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_recycler_list_view.*
+import mn.tuugii.walmartstore.CardView.CardViewMainActivity
 
 class ShoppingCategory : AppCompatActivity() {
     var username : String? = ""
@@ -33,15 +38,15 @@ class ShoppingCategory : AppCompatActivity() {
         var cat1: Category = Category(1, "Electronics", 1)
         categoryList.add(cat1)
 
-        productList.add(Product(1, cat1, "TV-1", 1000.00, "White", "tv", "This is a new TV"))
-        productList.add(Product(2, cat1, "TV-2", 1001.00, "Blue", "tv", "This is a new TV"))
-        productList.add(Product(3, cat1, "TV-3", 1002.00, "Black", "tv", "This is a new TV"))
+        productList.add(Product(1, cat1, "TV-1", 1000.00, "White", R.drawable.headphones, "This is a new TV"))
+        productList.add(Product(2, cat1, "TV-2", 1001.00, "Blue",  R.drawable.servers, "This is a new TV"))
+        productList.add(Product(3, cat1, "TV-3", 1002.00, "Black", R.drawable.phones, "This is a new TV"))
 
         var cat2: Category = Category(2, "Beauty", 2)
         categoryList.add(cat2)
-        productList.add(Product(11, cat2, "TV-1", 10.00, "White", "beauty", "This is a new beauty"))
-        productList.add(Product(12, cat2, "TV-2", 11.00, "Blue", "beauty", "This is a new beauty"))
-        productList.add(Product(13, cat2, "TV-3", 12.00, "Black", "beauty", "This is a new beauty"))
+        productList.add(Product(11, cat2, "TV-1", 10.00, "White", R.drawable.tablet, "This is a new beauty"))
+        productList.add(Product(12, cat2, "TV-2", 11.00, "Blue", R.drawable.notebook, "This is a new beauty"))
+        productList.add(Product(13, cat2, "TV-3", 12.00, "Black", R.drawable.phone, "This is a new beauty"))
 
         var cat3: Category = Category(3, "Phone", 3)
         categoryList.add(cat3)
@@ -54,9 +59,8 @@ class ShoppingCategory : AppCompatActivity() {
         when(view){
             imgElectronis -> {
                 Toast.makeText(this, "This is an electronic category.", Toast.LENGTH_LONG).show()
-                var intt = Intent(this, ListProductsActivity::class.java)
+                var intt = Intent(this, CardViewMainActivity::class.java)
                 //var s = productList.stream().filter { t: Product -> t.catid.toString() == "1" }.toArray()
-
                 intt.putExtra("productList", productList )
                 startActivity(intt)
             }
@@ -68,7 +72,7 @@ class ShoppingCategory : AppCompatActivity() {
             }
             imgPhone -> {
                 Toast.makeText(this, "This is a phone category.", Toast.LENGTH_LONG).show()
-                var intt = Intent(this, ListProductsActivity::class.java)
+                var intt = Intent(this, RecyclerListViewActivity::class.java)
                 intt.putExtra("productList", productList)
                 startActivity(intt)
             }
