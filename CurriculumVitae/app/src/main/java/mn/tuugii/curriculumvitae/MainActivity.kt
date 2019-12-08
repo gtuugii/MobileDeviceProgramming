@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import kotlinx.android.synthetic.main.fragment_home.*
 import mn.tuugii.curriculumvitae.classes.Person
 import sun.jvm.hotspot.utilities.IntArray
 import java.text.SimpleDateFormat
@@ -26,6 +27,15 @@ class MainActivity : AppCompatActivity() {
         txn.commit()
 
         init()
+
+        // homeIntent
+        if(intent.hasExtra("personList")){
+            var person =intent.getSerializableExtra("person") as Person
+
+            //imgPuje.setImageResource(person.image)
+
+
+        }
     }
 
     fun init(){
