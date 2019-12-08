@@ -1,16 +1,83 @@
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context=".HomeFragment">
 
-    <com.google.android.gms.plus.PlusOneButton xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus"
-        android:id="@+id/plus_one_button"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        plus:annotation="inline"
-        plus:size="standard" />
+        android:padding="5dp"
+        android:stretchColumns="*"
+        android:orientation="vertical" >
 
+        <TableRow android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/imgPuje"
+                    android:src="@drawable/puje">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/yourself"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="About yourself" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+
+        <TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/achievement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="achievement"/>
+            </LinearLayout>
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/blog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="blog"/>
+            </LinearLayout>
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+
+    </TableLayout>
 </FrameLayout>

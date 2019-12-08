@@ -8,51 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Home"
-            android:onClick="onBtnHome"
-            />
-
-        <Button
-            android:id="@+id/btnAbout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="AboutMe"
-            android:onClick="onBtnAbout"
-            />
-
-        <Button
-            android:id="@+id/btnWork"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Work"
-            android:onClick="onBtnWork"
-            />
-
-        <Button
-            android:id="@+id/btnContact"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Contact"
-            android:onClick="onBtnContact"
-            />
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/frMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:text="Enter"
+        android:onClick="btnEnter"
         />
 
 </LinearLayout>
