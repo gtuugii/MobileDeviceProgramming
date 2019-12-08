@@ -8,7 +8,7 @@ data class Person(var id: Int,
                   var lName: String,
                   var mName: String,
                   var bDate: Date,
-
+                  var image: Int,
                   var phone: String,
                   var email: String,
                   var facebook: String,
