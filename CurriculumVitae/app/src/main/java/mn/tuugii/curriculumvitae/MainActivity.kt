@@ -1,11 +1,15 @@
 package mn.tuugii.curriculumvitae
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import mn.tuugii.curriculumvitae.classes.Person
+import sun.jvm.hotspot.utilities.IntArray
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +24,21 @@ class MainActivity : AppCompatActivity() {
         txn = fmanager.beginTransaction()
         txn.add(R.id.frMain, HomeFragment())
         txn.commit()
+
+        init()
+    }
+
+    fun init(){
+        val dateformat: SimpleDateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)
+
+        var date ="05/05/2017"
+        //SimpleDateFormat output = new SimpleDateFormat("MMMM dd,yyyy @hh:mm:ss aa");
+        var oneWayTripDate = dateformat.parse(date);  // parse input
+
+        //listItems.add(dateformat.format(Date()))
+        var p1: Person(1, "Battuguldur", "Ganbold", "", dateformat.parse(date),
+                        "650-745-6863", "tuugii83@gmail.com", "gtuugii", "gtuugii", "Tuugii - ")
+
     }
 
     fun onBtnHome(view: View){
@@ -35,13 +54,13 @@ class MainActivity : AppCompatActivity() {
 
     fun onBtnWork(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, HomeFragment())
+        txn.replace(R.id.frMain, WorkFragment())
         txn.commit()
     }
 
     fun onBtnContact(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, HomeFragment())
+        txn.replace(R.id.frMain, ContactFragment())
         txn.commit()
     }
 
