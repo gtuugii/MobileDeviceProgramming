@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +16,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.content_main.*
-import kotlin.system.exitProcess
 
 class CardActivity : AppCompatActivity() {
     val dformat: SimpleDateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)
@@ -179,6 +177,7 @@ class CardActivity : AppCompatActivity() {
             "RenukaMohanraj",
             "I have 20 years experiences on the Java, J2EE and other software. In this term, developed and used applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming skill is usually used for development of Java and applications. Further, I will work on theproject development of software by a result from more study on configuration, integration and implementation. ",
             "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            "",
             addList2,
             eduList2,
             workList2,
