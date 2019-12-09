@@ -29,7 +29,7 @@ class CardViewAdapter(var context : Context,
             Toast.makeText(context," $res clicked", Toast.LENGTH_LONG).show()
 
             //intt.putExtra("person", pList[pos])
-            //intt.putExtra("person", pList[pos])
+            //intt.putExtra("person", pList[pos])/
             context.startActivity(intt)
         }
     }
