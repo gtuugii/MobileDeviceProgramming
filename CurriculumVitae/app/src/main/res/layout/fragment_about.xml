@@ -19,6 +19,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="12dp"
         android:textColor="@color/Black"
+        android:textStyle="bold"
         android:text="About Me"/>
 
     <TextView
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:textColor="@color/Black"
+        android:textStyle="bold"
         android:text="Educational Background: "/>
     <TextView
         android:layout_width="match_parent"
@@ -54,11 +56,17 @@
         android:textColor="@color/Black"
         />
 
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
+            android:textStyle="bold"
             android:text="Personal Info: "/>
         <TextView
             android:layout_width="match_parent"
@@ -71,11 +79,17 @@
             android:textColor="@color/Black"
             />
 
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
+            android:textStyle="bold"
             android:text="Strengths: "/>
         <TextView
             android:layout_width="match_parent"
@@ -88,11 +102,17 @@
             android:textColor="@color/Black"
             />
 
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
+            android:textStyle="bold"
             android:text="Weakness: "/>
         <TextView
             android:layout_width="match_parent"

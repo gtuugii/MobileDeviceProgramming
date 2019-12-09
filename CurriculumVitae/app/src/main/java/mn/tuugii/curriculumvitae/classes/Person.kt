@@ -20,6 +20,18 @@ data class Person(
     var achievements: String?,
     var blog: String?,
 
+    var eduBackground: String?,
+    var personalInfo: String?,
+    var strengths: String?,
+    var weakness: String?,
+
+    var workBackground: String?,
+    var workExperience: String?,
+    var projectInfo: String?,
+
+
+
+
     var addresses: ArrayList<Address>?,
     var educations: ArrayList<Education>?,
     var works: ArrayList<Work>?,

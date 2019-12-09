@@ -11,19 +11,17 @@
         android:orientation="vertical">
 
 
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="About Me"/>
+            android:text="Address"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAboutme"
+            android:id="@+id/tvAddress"
             android:text="Big text"
             android:textColor="@color/Black"
             android:layout_marginLeft="12dp"
@@ -41,15 +39,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="Achievements: "/>
+            android:text="Phone: "/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAchieve"
-            android:text="Big text"
+            android:id="@+id/tvPhone"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:lines="5"
+            android:text="Phone"
             android:textColor="@color/Black"
             />
 
@@ -58,14 +56,58 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="Blog: "/>
+            android:text="Email: "/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvBlog"
+            android:id="@+id/tvEmail"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:text="blog"
+            android:text="Email"
+            android:textColorLink="@color/Blue"
+            android:textColor="@color/Black"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/Black"
+            android:text="Facebook: "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFacebook"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="Facebook"
+            android:textColorLink="@color/Blue"
+            android:textColor="@color/Black"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/Black"
+            android:text="Twitter: "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTwitter"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="Twitter"
             android:textColorLink="@color/Blue"
             android:textColor="@color/Black"
             />

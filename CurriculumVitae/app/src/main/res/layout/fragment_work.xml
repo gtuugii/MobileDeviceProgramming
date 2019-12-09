@@ -10,25 +10,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="About Me"/>
+            android:textStyle="bold"
+            android:text="Working Background"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAboutme"
+            android:id="@+id/tvWorkBackground"
             android:text="Big text"
             android:textColor="@color/Black"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:lines="5"
+            android:lines="8"
             />
 
         <Space
@@ -41,35 +40,41 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="Achievements: "/>
+            android:textStyle="bold"
+            android:text="Experience: "/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAchieve"
+            android:id="@+id/tvExperience"
             android:text="Big text"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:lines="5"
+            android:lines="15"
             android:textColor="@color/Black"
             />
+
+        <Space
+            android:layout_width="match_parent"
+            android:textColor="@color/Black"
+            android:layout_height="30dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:textColor="@color/Black"
-            android:text="Blog: "/>
+            android:textStyle="bold"
+            android:text="Project Info: "/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvBlog"
+            android:id="@+id/tvProjectInfo"
+            android:text="Big text"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:text="blog"
-            android:textColorLink="@color/Blue"
+            android:lines="15"
             android:textColor="@color/Black"
             />
-
 
     </LinearLayout>
 
