@@ -7,6 +7,9 @@
     <string name="action_home">App.Home</string>
     <string name="action_add">Add new Person</string>
     <string name="action_about">About us</string>
+    <string name="action_load">Load</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
     <string name="action_exit">Exit</string>
 
 </resources>
