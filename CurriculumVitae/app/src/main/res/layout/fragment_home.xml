@@ -7,77 +7,107 @@
     android:background="@color/colorPrimary"
     tools:context=".HomeFragment">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:stretchColumns="*"
-        android:orientation="vertical" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow android:padding="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imgPuje"
-                    android:src="@drawable/puje">
-                </ImageView>
+        <RelativeLayout
+            android:id="@+id/playout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:padding="12dp">
 
-                <TextView
-                    android:id="@+id/yourself"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="About yourself" />
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/imgPerson"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@mipmap/ic_launcher" />
 
-        </TableRow>
+            <TextView
+                android:id="@+id/tvFirstName"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_marginEnd="80dp"
+                android:text="First Name:"
+                android:textColor="#00F"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tvLastName"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_marginEnd="80dp"
+                android:text="Last Name:"
+                android:textColor="#00F"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_marginEnd="80dp"
+                android:text="Birth of Date"
+                android:textColor="#00F" />
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="75dp"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_marginEnd="80dp"
+                android:text="Position"
+                android:textColor="#00F" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Me"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAboutme"
+            android:text="Big text"
+            android:lines="5"
+            />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            />
+            android:layout_height="30dp"/>
 
-        <TableRow>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/achievement"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="achievement"/>
-            </LinearLayout>
-        </TableRow>
-
-        <Space
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            />
-
-        <TableRow>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/blog"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="blog"/>
-            </LinearLayout>
-
-        </TableRow>
-
-        <Space
+            android:layout_height="wrap_content"
+            android:text="Achievements: "/>
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAchieve"
+            android:text="Big text"
+            android:lines="5"
             />
 
-    </TableLayout>
+
+
+    </LinearLayout>
+
+
 </FrameLayout>

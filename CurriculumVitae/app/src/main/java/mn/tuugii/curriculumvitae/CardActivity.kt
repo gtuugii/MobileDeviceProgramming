@@ -2,9 +2,12 @@ package mn.tuugii.curriculumvitae
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_card_view.*
 import mn.tuugii.curriculumvitae.classes.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class CardActivity : AppCompatActivity() {
     val dformat: SimpleDateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)
@@ -16,18 +19,22 @@ class CardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_card)
+        setContentView(R.layout.activity_card_view)
 
         init()
+
+        rv?.layoutManager = LinearLayoutManager(this)
+        var adapter = CardViewAdapter(this, personList)
+        rv!!.adapter = adapter
     }
 
     fun init(){
 
-        var p1 = Person(1, "Purevdemberel", " ", "", dformat.parse("12/20/1983"),
-            "999-999-9999", "puujee@gmail.com", "puujee", "puujee", "Puujee - ")
+        var p1 = Person(1, "Purevdemberel", " ", "", "Software Developer", dformat.parse("12/20/1983"),R.drawable.puje,
+            "999-999-9999", "puujee@gmail.com", "puujee", "puujee", "Puujee - ", "achievements...")
 
-        var p2 = Person(2, "Battuguldur", "Ganbold", "Tuugii", dformat.parse("12/20/1983"),
-            "650-745-6863", "tuugii83@gmail.com", "gtuugii", "gtuugii", "Tuugii - ")
+        var p2 = Person(2, "Battuguldur", "Ganbold", "Tuugii", "Software Developer", dformat.parse("12/20/1983"), R.drawable.puje,
+            "650-745-6863", "tuugii83@gmail.com", "gtuugii", "gtuugii", "Tuugii - ", "achievements...")
 
         personList.add(p1)
         personList.add(p2)
@@ -66,6 +73,5 @@ class CardActivity : AppCompatActivity() {
 
         projList.add(pr1)
     }
-
 
 }

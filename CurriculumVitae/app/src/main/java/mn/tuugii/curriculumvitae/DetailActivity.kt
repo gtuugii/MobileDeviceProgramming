@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import kotlinx.android.synthetic.main.fragment_home.*
 import mn.tuugii.curriculumvitae.classes.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -23,6 +24,14 @@ class DetailActivity : AppCompatActivity() {
         txn = fmanager.beginTransaction()
         txn.add(R.id.frMain, HomeFragment())
         txn.commit()
+
+        if(intent.hasExtra("person")){
+            var p = intent.getSerializableExtra("person") as Person
+            imgPerson.setImageResource(p.image)
+            tvFirstName.text = p.fName
+            tvLastName.text = p.lName
+
+        }
     }
 
     fun onBtnHome(view: View){

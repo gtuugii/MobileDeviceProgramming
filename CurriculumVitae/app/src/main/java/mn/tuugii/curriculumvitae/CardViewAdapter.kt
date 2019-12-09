@@ -1,6 +1,5 @@
 package mn.tuugii.curriculumvitae
 
-import android.app.Person
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -11,25 +10,27 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import android.content.Intent
 import android.widget.Toast
+import mn.tuugii.curriculumvitae.classes.Person
 
 class CardViewAdapter(var context : Context,
                       val pList: ArrayList<Person>) : RecyclerView.Adapter<CardViewAdapter.MyViewHolder>(){
 
     override fun onBindViewHolder(holder: MyViewHolder, pos: Int) {
 
-//        holder.img.setImageResource(pList[pos]?.image)
-//        holder.title.text = pList[pos]?.title.toString()
-//        holder.price.text = "Price: $" + pList[pos]?.price.toString()
-//        holder.color.text = "Color: " + pList[pos]?.color.toString()
+        holder.img.setImageResource(pList[pos]?.image)
+        holder.fullName.text = pList[pos]?.getFullName()
+        holder.position.text = "Price: $" + pList[pos]?.position.toString()
+        holder.age.text = "Color: " + pList[pos]?.bDate.toString()
 
         holder.parentlayout.setOnClickListener {
-            val intent = Intent(context, DetailActivity::class.java)
+            val intt = Intent(context, DetailActivity::class.java)
             var res = "" //pList[pos].title.toString()
 
             Toast.makeText(context," $res clicked", Toast.LENGTH_LONG).show()
 
-            intent.putExtra("product", pList[pos])
-            context.startActivity(intent)
+            //intt.putExtra("person", pList[pos])
+            //intt.putExtra("person", pList[pos])
+            context.startActivity(intt)
         }
     }
 
@@ -42,10 +43,11 @@ class CardViewAdapter(var context : Context,
     }
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var title: TextView = itemView.findViewById<TextView>(R.id.tvTitle)
-        var price: TextView = itemView.findViewById<TextView>(R.id.tvPrice)
-        var color: TextView = itemView.findViewById<TextView>(R.id.tvColor)
         var img : ImageView = itemView.findViewById<ImageView>(R.id.imageView)
+        var fullName: TextView = itemView.findViewById<TextView>(R.id.tvFullName)
+        var position: TextView = itemView.findViewById<TextView>(R.id.tvPosition)
+        var age: TextView = itemView.findViewById<TextView>(R.id.tvAge)
+
         var parentlayout : RelativeLayout = itemView.findViewById(R.id.playout) as RelativeLayout
     }
 
