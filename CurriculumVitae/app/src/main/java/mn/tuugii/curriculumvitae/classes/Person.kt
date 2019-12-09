@@ -42,7 +42,6 @@ data class Person(
     var workBackground: String?,
     var workExperience: String?,
     var projectInfo: String?,
-//test
 
 
 
