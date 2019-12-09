@@ -19,17 +19,16 @@ class CardViewAdapter(var context : Context,
 
         holder.img.setImageResource(pList[pos]?.image)
         holder.fullName.text = pList[pos]?.getFullName()
-        holder.position.text = "Price: $" + pList[pos]?.position.toString()
-        holder.age.text = "Color: " + pList[pos]?.bDate.toString()
+        holder.position.text = "Position: " + pList[pos]?.position.toString()
+        holder.age.text = "BirthDay: " + pList[pos]?.bDate.toString()
 
         holder.parentlayout.setOnClickListener {
             val intt = Intent(context, DetailActivity::class.java)
-            var res = "" //pList[pos].title.toString()
+            var res = pList[pos].getFullName()
 
             Toast.makeText(context," $res clicked", Toast.LENGTH_LONG).show()
 
-            //intt.putExtra("person", pList[pos])
-            //intt.putExtra("person", pList[pos])
+            intt.putExtra("person", pList[pos])
             context.startActivity(intt)
         }
     }
