@@ -20,7 +20,7 @@ class CardViewAdapter(var context : Context,
         holder.img.setImageResource(pList[pos]?.image)
         holder.fullName.text = pList[pos]?.getFullName()
         holder.position.text = "Position: " + pList[pos]?.position.toString()
-        holder.age.text = "BirthDay: " + pList[pos]?.bDate.toString()
+        holder.DOB.text = "BirthDay: " + pList[pos]?.bDate.toString()
 
         holder.parentlayout.setOnClickListener {
             val intt = Intent(context, DetailActivity::class.java)
@@ -45,7 +45,7 @@ class CardViewAdapter(var context : Context,
         var img : ImageView = itemView.findViewById<ImageView>(R.id.imageView)
         var fullName: TextView = itemView.findViewById<TextView>(R.id.tvFullName)
         var position: TextView = itemView.findViewById<TextView>(R.id.tvPosition)
-        var age: TextView = itemView.findViewById<TextView>(R.id.tvAge)
+        var DOB: TextView = itemView.findViewById<TextView>(R.id.tvDOB)
 
         var parentlayout : RelativeLayout = itemView.findViewById(R.id.playout) as RelativeLayout
     }
