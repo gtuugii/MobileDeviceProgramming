@@ -23,12 +23,11 @@
 
         <TextView
             android:id="@+id/tvFullName"
-            android:layout_width="199dp"
-            android:layout_height="41dp"
-            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignTop="@+id/imageView"
-            android:layout_marginEnd="80dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="220dp"
             android:text="tvFullName"
             android:textColor="#00F"
             android:textSize="18dp" />
@@ -39,20 +38,28 @@
             android:layout_height="47dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="14dp"
-            android:layout_marginLeft="20dp"
-            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginLeft="110dp"
+            android:layout_alignLeft="@+id/imageView"
             android:text="tvPosition"
+            android:textStyle="italic"
             android:textColor="#00F" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
         <TextView
-            android:id="@+id/tvAge"
+            android:id="@+id/tvDOB"
             android:layout_width="246dp"
             android:layout_height="47dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="1dp"
-            android:layout_marginLeft="20dp"
-            android:layout_toEndOf="@+id/imageView"
-            android:text="tvAge"
+            android:textStyle="italic"
+            android:layout_alignLeft="@id/imageView"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="60dp"
+
+
+            android:text="tvDOB"
             android:textColor="#00F" />
 
     </RelativeLayout>

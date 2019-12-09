@@ -29,9 +29,8 @@
                 android:id="@+id/tvFirstName"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_marginEnd="80dp"
+                android:layout_alignLeft="@id/imgPerson"
+                android:layout_marginLeft="110dp"
                 android:text="First Name:"
                 android:textColor="#00F"
                 android:textSize="15dp" />
@@ -40,11 +39,9 @@
                 android:id="@+id/tvLastName"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@id/imgPerson"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="25dp"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_marginEnd="80dp"
                 android:text="Last Name:"
                 android:textColor="#00F"
                 android:textSize="15dp" />
@@ -54,11 +51,9 @@
                 android:id="@+id/tvAge"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@id/imgPerson"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="50dp"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_marginEnd="80dp"
                 android:text="Birth of Date"
                 android:textColor="#00F" />
 
@@ -66,11 +61,9 @@
                 android:id="@+id/tvPosition"
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@id/imgPerson"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="75dp"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_marginEnd="80dp"
                 android:text="Position"
                 android:textColor="#00F" />
 
