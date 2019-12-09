@@ -24,7 +24,7 @@ class CardActivity : AppCompatActivity() {
     var undoOnClickListener: View.OnClickListener = View.OnClickListener { view ->
         listItems.removeAt(listItems.size - 1)
         adapter2?.notifyDataSetChanged()
-        
+
         Snackbar.make(view, "Item removed", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
     }
