@@ -50,13 +50,13 @@ class CardActivity : AppCompatActivity() {
         prList1.add(pr11)
 
         var p1 = Person(1, "Purevdemberel", "Byambatogtokh", "", "Software Developer",
-            dformat.parse("12/20/1983"),R.drawable.puje,
-            "999-999-9999", "puujee@gmail.com", "puujee", "puujee",
-            "I have 5 years experiences on the Java, J2EE and other software. In this term, developed and used\n" +
-                    "applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming\n" +
-                    "skill is usually used for development of Java and applications. Further, I will work on the\n" +
-                    "project development of software by a result from more study on configuration, integration,\n" +
-                    "and implementation. ", "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            dformat.parse("09/03/1989"),R.drawable.puje,
+            "999-999-9999",
+            "purevdemberel@gmail.com",
+            "bpurevdemberel",
+            "@bpurevdemberel",
+            "I have 5 years experiences on the Java, J2EE and other software. In this term, developed and used applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming skill is usually used for development of Java and applications. Further, I will work on theproject development of software by a result from more study on configuration, integration and implementation. ",
+            "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
             addList1,
             eduList1,
             workList1,
@@ -95,8 +95,12 @@ class CardActivity : AppCompatActivity() {
         prList2.add(pr1)
         var p2 = Person(2, "Battuguldur", "Ganbold", "Tuugii", "Software Developer",
             dformat.parse("12/20/1983"), R.drawable.tuugii,
-            "650-745-6863", "tuugii83@gmail.com", "gtuugii", "gtuugii",
-            "Tuugii - ", "achievements...",
+            "650-745-6863",
+            "tuugii83@gmail.com",
+            "gtuugii",
+            "gtuugii",
+            "I have 10 years experiences on the Java, J2EE and other software. In this term, developed and used applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming skill is usually used for development of Java and applications. Further, I will work on theproject development of software by a result from more study on configuration, integration and implementation. ",
+            "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
             addList2,
             eduList2,
             workList2,
