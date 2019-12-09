@@ -18,7 +18,7 @@ class CardViewAdapter(var context : Context,
 
     override fun onBindViewHolder(holder: MyViewHolder, pos: Int) {
 
-        val formatter = SimpleDateFormat("dd/MM/yyyy")
+        val formatter = SimpleDateFormat("MM/dd/yyyy")
 
         holder.img.setImageResource(pList[pos]?.image)
         holder.fullName.text = pList[pos]?.getFullName()
