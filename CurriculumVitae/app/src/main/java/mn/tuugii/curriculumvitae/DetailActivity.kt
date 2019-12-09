@@ -2,58 +2,83 @@ package mn.tuugii.curriculumvitae
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import kotlinx.android.synthetic.main.fragment_home.*
-import mn.tuugii.curriculumvitae.classes.*
-import java.text.SimpleDateFormat
-import java.util.*
-
+import mn.tuugii.curriculumvitae.classes.Person
 
 class DetailActivity : AppCompatActivity() {
 
     lateinit var fmanager : FragmentManager
     lateinit var txn: FragmentTransaction
+    var p: Person? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_main)
 
+        val intt = intent
+
+        if(intt.hasExtra("person")){
+            p = intt.getSerializableExtra("person") as Person
+            Toast.makeText(this, "this is : " + p?.fName.toString(), Toast.LENGTH_SHORT).show()
+        }
+
         fmanager = supportFragmentManager
         txn = fmanager.beginTransaction()
-        txn.add(R.id.frMain, HomeFragment())
+        val bundle = Bundle()
+        bundle.putSerializable("person", p)
+        val fragobj = HomeFragment()
+        fragobj.arguments = bundle
+
+        txn.add(R.id.frMain, fragobj)
         txn.commit()
 
-        if(intent.hasExtra("person")){
-            var p = intent.getSerializableExtra("person") as Person
-            imgPerson.setImageResource(p.image)
-            tvFirstName.text = p.fName
-            tvLastName.text = p.lName
-
-        }
     }
 
     fun onBtnHome(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, HomeFragment())
+
+        val bundle = Bundle()
+        bundle.putSerializable("person", p)
+        val fragobj = HomeFragment()
+        fragobj.arguments = bundle
+
+        txn.replace(R.id.frMain, fragobj)
         txn.commit()
     }
     fun onBtnAbout(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, AboutFragment())
+        val bundle = Bundle()
+        bundle.putSerializable("person", p)
+        val fragobj = AboutFragment()
+        fragobj.arguments = bundle
+
+        txn.replace(R.id.frMain, fragobj)
         txn.commit()
     }
 
     fun onBtnWork(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, WorkFragment())
+        val bundle = Bundle()
+        bundle.putSerializable("person", p)
+        val fragobj = WorkFragment()
+        fragobj.arguments = bundle
+
+        txn.replace(R.id.frMain, fragobj)
         txn.commit()
     }
 
     fun onBtnContact(view: View){
         txn = fmanager.beginTransaction()
-        txn.replace(R.id.frMain, ContactFragment())
+        val bundle = Bundle()
+        bundle.putSerializable("person", p)
+        val fragobj = ContactFragment()
+        fragobj.arguments = bundle
+
+        txn.replace(R.id.frMain, fragobj)
         txn.commit()
     }
 
