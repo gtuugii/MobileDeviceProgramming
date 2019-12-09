@@ -24,10 +24,10 @@
         <TextView
             android:id="@+id/tvFullName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_alignTop="@+id/imageView"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="110dp"
             android:text="tvFullName"
             android:textColor="#00F"
             android:textSize="18dp" />
