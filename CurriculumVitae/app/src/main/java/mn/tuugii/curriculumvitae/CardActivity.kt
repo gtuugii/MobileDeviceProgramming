@@ -2,10 +2,10 @@ package mn.tuugii.curriculumvitae
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,8 +16,12 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.content_main.*
-import kotlin.system.exitProcess
+import java.io.FileNotFoundException
+import java.io.FileReader
+import java.io.FileWriter
+import java.io.IOException
 
 class CardActivity : AppCompatActivity() {
     val dformat: SimpleDateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.US)
@@ -46,6 +50,7 @@ class CardActivity : AppCompatActivity() {
         }
 
         init()
+        loadDataFromStorage()
 
         rv?.layoutManager = LinearLayoutManager(this)
         adapter = CardViewAdapter(this, personList)
@@ -55,6 +60,7 @@ class CardActivity : AppCompatActivity() {
         addPerson()
         adapter?.notifyDataSetChanged()
     }
+
     fun init(){
 
         //Puujee
@@ -411,11 +417,84 @@ class CardActivity : AppCompatActivity() {
                 dialog.show()
                 return true
             }
+            R.id.action_reload -> {
+                reload()
+                return true
+            }
+            R.id.action_load -> {
+                loadDataFromStorage()
+                return true
+            }
+            R.id.action_save -> {
+                if (personList.size > 0)
+                {
+                    val persons = Persons()
+                    persons.personList = personList
+                    // Conversion Employees list object to JSON using Gson
+                    val gson = Gson()
+                    val response = gson.toJson(persons)
+                    // Writing the converted data into File using FileWriter in Your device external storage
+                    val path = (Environment.getExternalStorageDirectory().absolutePath
+                            + "/persons_gson.json")
+                    try
+                    {
+                        val writer = FileWriter(path)
+                        writer.write(response)
+                        writer.flush()
+                        writer.close()
+                        Toast.makeText(applicationContext, "Write successfully on file", Toast.LENGTH_LONG).show()
+                    }
+                    catch (e1: IOException) {
+                        e1.printStackTrace()
+                    }
+                }
+                else
+                    Toast.makeText(applicationContext, "Can't Write Empty List", Toast.LENGTH_LONG).show()
+                return true
+            }
+            R.id.action_delete -> {
+                personList.removeAt(personList.size - 1)
+                adapter?.notifyDataSetChanged()
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
 
         }
 
         return false
+    }
+
+    fun reload(){
+        personList.clear()
+        init()
+        adapter?.notifyDataSetChanged()
+    }
+
+    fun loadDataFromStorage(){
+        val path = (Environment.getExternalStorageDirectory()
+            .absolutePath + "/persons_gson.json")
+        try
+        {
+            val reader = FileReader(path)
+            val gson = Gson()
+            val persons = gson.fromJson(reader, Persons::class.java)
+            Toast.makeText(applicationContext, persons.toString(), Toast.LENGTH_LONG).show()
+            personList.clear()
+            //adapter?.notifyDataSetChanged()
+
+            if (persons.personList.size > 0){
+                for (e in persons.personList){
+                    personList.add(e)
+                    Toast.makeText(applicationContext, e.toString(), Toast.LENGTH_LONG).show()
+                }
+                adapter?.notifyDataSetChanged()
+            }
+            else
+                Toast.makeText(applicationContext, "No data", Toast.LENGTH_LONG).show()
+        }
+        catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        }
     }
 
 }

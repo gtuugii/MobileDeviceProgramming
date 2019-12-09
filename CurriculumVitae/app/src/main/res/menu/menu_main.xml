@@ -13,8 +13,13 @@
         android:title="@string/action_add"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_load"
+        android:id="@+id/action_reload"
         android:orderInCategory="201"
+        android:title="@string/action_reload"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_load"
+        android:orderInCategory="202"
         android:title="@string/action_load"
         app:showAsAction="never" />
     <item
