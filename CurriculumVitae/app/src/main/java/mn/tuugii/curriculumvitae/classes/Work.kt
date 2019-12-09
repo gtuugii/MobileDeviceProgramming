@@ -1,13 +1,21 @@
 package mn.tuugii.curriculumvitae.classes
 
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
-import java.time.LocalDate
 import java.util.*
 
-data class Work(var workId: Int?,
-                var companyName: String?,
-                var startDate: Date?,
-                var endDate: Date?,
-                var position: String?,
-                var desc: String?):
+data class Work(
+    @SerializedName("workId")
+    var workId: Int?,
+    @SerializedName("companyName")
+    var companyName: String?,
+    @SerializedName("startDate")
+    var startDate: Date?,
+    @SerializedName("endDate")
+    var endDate: Date?,
+    @SerializedName("position")
+    var position: String?,
+    @SerializedName("desc")
+    var desc: String?
+) :
     Serializable {}
