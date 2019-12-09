@@ -69,7 +69,7 @@ class CardActivity : AppCompatActivity() {
         eduList1.add(e1)
 
         var w11 = Work(31, "Zoosbank", dformat.parse("06/20/2005"), dformat.parse("11/29/2009"),
-            "Software engineer", "in It deaprtment")
+            "Software engineer", "in It department")
 
         var workList1 = ArrayList<Work>()
         workList1.add(w11)
@@ -87,7 +87,8 @@ class CardActivity : AppCompatActivity() {
             "bpurevdemberel",
             "@bpurevdemberel",
             "I have 5 years experiences on the Java, J2EE and other software. In this term, developed and used applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming skill is usually used for development of Java and applications. Further, I will work on theproject development of software by a result from more study on configuration, integration and implementation. ",
-            "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            "Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            "https://medium.com/@puje_b",
             addList1,
             eduList1,
             workList1,
@@ -131,7 +132,8 @@ class CardActivity : AppCompatActivity() {
             "gtuugii",
             "gtuugii",
             "I have 10 years experiences on the Java, J2EE and other software. In this term, developed and used applications are: Java, JSP, HTML5, CSS3, jQuery, JavaScript, JSON, MySQL Servlet, Hibernate. Object Oriented (OOPS) programming skill is usually used for development of Java and applications. Further, I will work on theproject development of software by a result from more study on configuration, integration and implementation. ",
-            "•Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            "Developed new authorization mode for social and smart banking using biometric security. Created streamlined online customer registration system, measurably increasing customer sign-ups\n",
+            "https://medium.com/@tuugii_g",
             addList2,
             eduList2,
             workList2,

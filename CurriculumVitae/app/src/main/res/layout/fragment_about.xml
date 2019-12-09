@@ -4,13 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/White"
     tools:context=".AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/Black"
+        android:text="About Me"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAboutme"
+        android:text="Big text"
+        android:textColor="@color/Black"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:lines="5"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:textColor="@color/Black"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/Black"
+        android:text="Educational Background: "/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEBackground"
+        android:text="Big text"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:lines="5"
+        android:textColor="@color/Black"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/Black"
+            android:text="Personal Info: "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPersonalInfo"
+            android:text="Big text"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:lines="5"
+            android:textColor="@color/Black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/Black"
+            android:text="Strengths: "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvStrengths"
+            android:text="Big text"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:lines="5"
+            android:textColor="@color/Black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/Black"
+            android:text="Weakness: "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWeakness"
+            android:text="Big text"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:lines="5"
+            android:textColor="@color/Black"
+            />
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

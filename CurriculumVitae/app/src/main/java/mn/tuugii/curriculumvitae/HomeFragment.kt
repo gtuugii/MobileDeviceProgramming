@@ -34,5 +34,6 @@ class HomeFragment : Fragment() {
         tvPosition.text = "Position: " + p?.position.toString()
         tvAboutme.text = p?.aboutMe.toString()
         tvAchieve.text = p?.achievements.toString()
+        tvBlog.text = p?.blog.toString()
     }
 }

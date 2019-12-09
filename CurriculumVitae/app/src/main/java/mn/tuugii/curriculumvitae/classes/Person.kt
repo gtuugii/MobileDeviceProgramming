@@ -18,6 +18,7 @@ data class Person(
     var twitter: String?,
     var aboutMe: String?,
     var achievements: String?,
+    var blog: String?,
 
     var addresses: ArrayList<Address>?,
     var educations: ArrayList<Education>?,
