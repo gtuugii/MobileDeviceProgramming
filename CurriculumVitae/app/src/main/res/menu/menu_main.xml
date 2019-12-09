@@ -4,22 +4,37 @@
     tools:context="com.example.fabsnackbardemo.MainActivity">
     <item
         android:id="@+id/action_home"
-        android:orderInCategory="1"
+        android:orderInCategory="100"
         android:title="@string/action_home"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_add"
-        android:orderInCategory="2"
+        android:orderInCategory="200"
         android:title="@string/action_add"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_load"
+        android:orderInCategory="201"
+        android:title="@string/action_load"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="300"
+        android:title="@string/action_save"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="301"
+        android:title="@string/action_delete"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_about"
-        android:orderInCategory="3"
+        android:orderInCategory="400"
         android:title="@string/action_about"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_exit"
-        android:orderInCategory="4"
+        android:orderInCategory="500"
         android:title="@string/action_exit"
         app:showAsAction="never" />
 </menu>

@@ -1,14 +1,23 @@
 package mn.tuugii.curriculumvitae.classes
 
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
-import java.time.LocalDate
 import java.util.*
 
-data class Education(var eduId: Int?,
-                     var startDate: Date?,
-                     var endDate: Date?,
-                     var where: String?,
-                     var gpa: Double?,
-                     var degree: String?,
-                     var note: String?):
+data class Education(
+    @SerializedName("eduId")
+    var eduId: Int?,
+    @SerializedName("startDate")
+    var startDate: Date?,
+    @SerializedName("endDate")
+    var endDate: Date?,
+    @SerializedName("where")
+    var where: String?,
+    @SerializedName("gpa")
+    var gpa: Double?,
+    @SerializedName("degree")
+    var degree: String?,
+    @SerializedName("note")
+    var note: String?
+) :
     Serializable {}

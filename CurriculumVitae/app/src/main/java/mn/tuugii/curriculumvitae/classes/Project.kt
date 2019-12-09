@@ -1,13 +1,21 @@
 package mn.tuugii.curriculumvitae.classes
 
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
-import java.time.LocalDate
 import java.util.*
 
-data class Project(var pId: Int?,
-                   var projectName: String?,
-                   var startDate: Date?,
-                   var endDate: Date?,
-                   var used: String?,
-                   var desc: String?):
+data class Project(
+    @SerializedName("pId")
+    var pId: Int?,
+    @SerializedName("projectName")
+    var projectName: String?,
+    @SerializedName("startDate")
+    var startDate: Date?,
+    @SerializedName("endDate")
+    var endDate: Date?,
+    @SerializedName("used")
+    var used: String?,
+    @SerializedName("desc")
+    var desc: String?
+) :
     Serializable {}
